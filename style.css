@@ -1,0 +1,480 @@
+@font-face {
+    font-family: apple_ui;
+    src: url("./Fonts/SF-Pro.ttf");
+}
+
+@font-face {
+  font-family: source_sans_pro;
+  src: url("./Fonts/SourceSansPro-Bold.otf");
+}
+
+body{
+  -webkit-tap-highlight-color: transparent;
+  /* background-color: black; */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+
+.hamber_option{
+  display: none;
+}
+
+#display_options_menu{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  visibility: visible;
+  font-family: apple_ui;
+  /* margin-top: 1px; */
+}
+
+#login_title{
+  /* display: none; */
+
+  position: absolute;
+  margin-top: -90px;
+  margin-left: 260px;
+  font-family: source_sans_pro;
+  font-size: 45px;
+
+  /* display: inline-block;
+  border: 2px solid black; */
+
+}
+
+.option_hover_hamburger:hover{
+  border-bottom: 5px solid #1671e8;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+#full_main_container{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  /* border: 2px solid black; */
+  
+  
+  margin-top: 40vh;
+  margin-left: 20vh;
+
+}
+
+.top_container{
+  display: flex;
+}
+
+.input_container{
+  font-family: apple_ui;
+  color: black;
+  /* position: absolute;
+  top: 100px;
+  left: 100px; */
+  height: 20px;
+  background-color: #f2f2f5;
+
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  /* border: 1.9px solid black; */
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+
+}
+
+.input_container_email_phone{
+  font-family: apple_ui;
+  color: black;
+  /* position: absolute;
+  top: 100px;
+  left: 100px; */
+  height: 20px;
+  background-color: #f2f2f5;
+
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  /* border: 1.9px solid black; */
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.dots{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+
+#sign_up_position{
+  position: absolute;
+  /* background-color: red; */
+  top: 258px;
+  right: 90px;
+}
+
+#repassword_sign_up_position{
+  position: absolute;
+  top: 320px;
+  right: 90px;
+}
+
+.circle{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #878787;
+}
+
+
+#apple_submit_logo{
+  height: 35px;
+  width: 35px;
+  rotate: 270deg;
+
+  margin-left: 10px;
+  margin-top: 55.5px;
+  cursor: pointer;
+}
+
+
+
+
+.loader_top_container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 0px;
+    margin-top: 27px;
+    scale: 0.6;
+}
+
+.loader {
+  animation: rotate 1.5s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1.5s infinite;
+  background-color: #babac8;
+  box-shadow: 30px 0 0 #1671e8;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1.5s infinite;
+  background-color: #1671e8;
+  box-shadow: 30px 0 0 #babac8;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(0.8) }
+  50% { transform: rotate(360deg) scale(1.2) }
+  100% { transform: rotate(720deg) scale(0.8) }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #1671e8;
+  }
+  50% {
+    box-shadow: 0 0 0 #1671e8;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #1671e8;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {    
+  0% {
+    box-shadow: 30px 0 0 #babac8;
+  }
+  50% {
+    box-shadow: 0 0 0 #babac8;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #babac8;
+    margin-top: 0;
+  }
+}
+    
+#forgot_password {
+  all: unset;
+  position: absolute;
+  align-self: flex-end; 
+  font-family: apple_ui;
+  color: #1671e8;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 95px; 
+  margin-right: 55px;
+
+}
+
+
+#other_login_option_div{
+  height: 50px;
+  width: 226px;
+  border: 2px solid #302D2D;
+
+  /* position: relative; */
+  margin-left: 14%;
+  margin-top: 24px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(48, 45, 45, 0.40);
+  background-color: #fff;
+  box-shadow: 5px 5px 11.8px 0px rgba(93, 93, 114, 0.25);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  /* gap: 10px; */
+}
+
+
+.image_login_option_class{
+  scale: 1;
+  height: 35.4px;
+  width: 35.4px;
+  cursor: pointer;
+}
+
+#dividing_line{
+  rotate: 90deg;
+  margin-top: -180px;
+  margin-left: 30vw;
+  width: 450px;
+  height: 0.4px;
+  background-color: #f2f2f5;
+}
+
+.TnC_designer{
+  margin-top: 280px;
+  margin-left: 400px;
+  width: auto;
+
+}
+
+
+/* #SignUpPage{
+  position: absolute;
+  font-family: apple_ui;
+  margin-left: 1000px;
+  margin-top: -525px;
+  font-family: source_sans_pro;
+  font-size: 45px;
+} */
+
+#SignUpPage{
+  height: 493px;
+  width: 600px;
+  /* border: 2px solid black; */
+  position: absolute;
+  margin-top: -530px;
+  margin-left: 800px;
+}
+
+#sign_up_text{
+  font-size: 40px;
+  font-family: source_sans_pro;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.input_container_fname_lname{
+  all: unset;
+  border-radius: 12px;
+  width: 300px;
+  height: 75px; 
+  font-size: 24px;
+  border: 1px solid #5A4E4E;
+  background: #FFF;
+  padding-left: 10px;
+  scale: .7;
+  margin-top: -100px;
+}
+ 
+.last_name{
+  margin-left: -70px;
+}
+
+
+.input_container_email{
+  all: unset;
+  font-family: apple_ui;
+  margin-left: -7px;
+  margin-top: -15px;
+  padding-left: 10px;
+  border: 1px solid #5A4E4E;
+  height: 75px;
+  width: 500px;
+  background: #FFF;
+  font-size: 24px;
+  scale: .7;
+  border-radius: 12px;
+}
+
+.input_gender{
+  height: 75px;
+  width: 110px;
+  scale: .7;
+  border: 1px solid #5A4E4E;
+  border-radius: 12px;
+  padding-left: 10px;
+  margin-top: -15px;
+  margin-left: -80px;
+  font-size: 24px;
+}
+
+.input_password_signup{
+  all: unset; 
+  font-size: 24px;
+  font-family: apple_ui;
+  height: 75px;
+  width: 650px;
+  scale: .7;
+  border: 1px solid #5A4E4E;
+  border-radius: 12px;
+  padding-left: 10px;
+  margin-left: -30px;
+  margin-top: -15px;
+}
+
+
+.submit_button{
+  all: unset;
+  font-family: apple_ui;
+  background-color: #1671e8;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  border-radius: 50px;
+  scale: .8;
+  margin-left: 250px;
+  cursor: pointer;
+}
+
+#mobile_responsive_only{
+  visibility: hidden;
+}
+
+#TnC_image{
+  height: 14px;
+  width: 14px;
+  /* scale: .8; */
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body{
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .hamber_option{
+    display: block;
+  }
+
+  #display_options_menu{
+    display: none;
+    position: absolute; 
+    margin-top: 5vh; 
+    scale: .7; 
+    right: 50px;
+    top: 0px;
+    gap: 0px;
+    /* color: #1671e8; */
+  
+  }
+  
+  
+
+  #login_title{
+    display: flex;
+    justify-content: center;
+    font-family: source_sans_pro;
+    font-size: 50px;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 30vw;
+  }
+
+  #full_main_container{
+    scale: .9;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  #super_main_container{
+    margin-top: 35vh;
+  }
+  
+
+  #dividing_line{
+    display: none;
+  }
+
+  .TnC_designer{
+    margin-top: 120px;
+    margin-left: 10px;
+    padding: 0px 15px;
+    width: auto;
+    font-size: 14px;
+  }
+
+  #TnC_image{
+    scale: .8;
+  }
+
+  #SignUpPage{
+    display: none;
+  }
+
+  #mobile_responsive_only{
+    visibility: visible;
+  }
+}
+      

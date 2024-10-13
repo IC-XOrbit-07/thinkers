@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="super_main_container">
+        <div id="main_logo" style="position: absolute; scale: 1.04; left: 8vw; height: 100px; width: 250px; top: 5vh; font-family: apple_ui; font-weight: 800; color: #1671e8; font-size: 30px;"><a href="./index.html" style="all: unset; cursor: pointer;">Thinkers</a></div>
+
+
+        <div style="display: flex; flex-direction: column; gap: 5px; position: absolute; margin-top: -30vh; right: 30px; scale: .6;" onclick="show_menu()">
+            <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+            <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+            <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+        </div>
+
+        <div id="display_options_menu">
+            
+            <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Home</p></a>
+            <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">About Us</p></a>
+            <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Services</p></a>
+            <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Prices</p></a>
+        </div> 
+
+        <div id="login_title">Login</div>
+        <div id="full_main_container">
+            <div class="top_container">
+                <div style="display: flex; gap: 10px; flex-direction: column;">
+                    <div class="input_container_email_phone" style="width: 315px;">
+                        <input type="text" placeholder="Email or Phone Number" style="all:unset">
+                    </div>
+                    <div class="input_container">
+                        <input type="password" placeholder="Enter your Password" style="all:unset" id="get_password">
+                        <!-- <div class="dots">
+                            <div class="circle" id="condition1"></div>
+                            <div class="circle" id="condition2"></div>
+                            <div class="circle" id="condition3"></div>
+                            <div class="circle" id="condition4"></div>
+                            <div class="circle" id="condition5"></div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div id="submit_button">
+                    <button style="all: unset;"><img src="./images/submit_apple_logo.png" alt="" srcset="" id="apple_submit_logo" onclick="check_login_id_pass()"></button>
+                    <div class="loader_top_container">
+                        <span class="loader" style="display: none;" id="extra_target"></span>
+                    </div>
+                </div>
+            </div>
+    
+            <a href="#" id="forgot_password">Forgot password ?</a>
+    
+            <p style="all: unset; font-family: apple_ui; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-top: 40px;">or login with</p>
+    
+            <div id="other_login_option_div">
+                <div><img src="./images/google.png" alt="" class="image_login_option_class"></div>
+                <div><img src="./images/apple.png" alt="" class="image_login_option_class"></div>
+                <div><img src="./images/facebook.png" alt="" class="image_login_option_class"></div>
+                <div><img src="./images/2fa.png" alt="" class="image_login_option_class"></div>
+            </div>
+        </div>
+
+        <hr id="dividing_line">
+
+        <div id="mobile_responsive_only" style="position:absolute; display: flex; flex-direction: column; margin-left: 36vw; margin-top: 0px; font-family: apple_ui;">
+            <p style="display: flex; align-items: center; justify-content: center;" id="or_text">or</p>
+            <div id="signup_button"><button style="all: unset; padding: 10px 10px 10px 10px; border-radius: 30px; background-color: #1671e8; font-family: apple_ui; color: white; font-weight: 800;" ><a href="./register.html" style="all: unset;">Sign Up</a></button></div>
+        </div>
+
+        <p id="tnc_id" class="TnC_designer" style="font-family: apple_ui;"><img src="./images/Vector.png" alt=""  id="TnC_image"> Click <a style="color: #1671e8; text-decoration: underline;" href="#">here</a> to read our terms and conditions and privacy policy regarding data protection.</p>
+
+        <div id="SignUpPage">
+            <p id="sign_up_text">Sign Up</p>
+
+            <div style="font-family: apple_ui; display: flex; flex-direction: row; justify-content: center;">
+                <div id="first_name"><input type="text" placeholder="First Name" class="input_container_fname_lname first_name"></div>
+                <div id="last_name"><input type="text" placeholder="Last Name" class="input_container_fname_lname last_name"></div>
+            </div>
+
+            <div style="display: flex; flex-direction: row;">
+                <div id="email_address"><input type="text" placeholder="Enter your email address" class="input_container_email"></div>
+                <div id="gender"><input type="text" placeholder="Gender" class="input_gender"></div>
+            </div>
+            <div>
+                <div id="password"><input type="password" placeholder="Enter strong password" class="input_password_signup" id="sign_up_user_password">
+                    <div class="dots" id="sign_up_position">
+                        <div class="circle" id="condition1"></div>
+                        <div class="circle" id="condition2"></div>
+                        <div class="circle" id="condition3"></div>
+                        <div class="circle" id="condition4"></div>
+                        <div class="circle" id="condition5"></div>
+                    </div>
+                </div>
+                <div id="password"><input type="password" placeholder="Re-enter strong password" class="input_password_signup" id="sign_up_user_reenter_password">
+                </div>
+            </div>
+            <button class="submit_button"><a href="#" style="all: unset;" onclick="color_updater()">Submit</a></button>
+        </div>
+
+    </div>
+
+    <!-- <input type="password" placeholder="Enter your password" style="all:unset" id="get_password"class="input_container"> -->
+    
+
+    <script src="/logic.js"></script>
+</body>
+</html>

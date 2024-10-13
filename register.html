@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/register.css">
+</head>
+<body>
+    <div id="main_logo" style="position: absolute; scale: 1.04; left: 8vw; height: 100px; width: 250px; top: 5vh; font-family: apple_ui; font-weight: 800; color: #1671e8; font-size: 30px;"><a href="./index.html" style="all: unset; cursor: pointer;">Thinkers</a></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; position: absolute; margin-top: 5vh; right: 30px; scale: .6;" onclick="show_menu()">
+        <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+        <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+        <div style="height: 5px; width:30px; background-color: black; cursor: pointer;" class="hamber_option"></div>
+    </div>
+    <div id="display_options_menu">
+        <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Home</p></a>
+        <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">About Us</p></a>
+        <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Services</p></a>
+        <a href="#" style="all: unset; font-family: apple_ui; font-weight: 400;"><p style="cursor: pointer;" class="option_hover_hamburger">Prices</p></a>
+    </div>
+
+    <div id="register">
+        <div id="register_title">
+            Register
+        </div>
+
+        <div>
+            <div><input type="text" id="first_name_input" placeholder="Enter your first name"></div>
+            <div><input type="text" id="last_name_input" placeholder="Enter your last name"></div>
+            <div><input type="text" id="email_id_input" placeholder="Enter your last name"></div>
+        </div>
+
+    </div>
+
+    <script src="./logic.js"></script>
+</body>
+</html>

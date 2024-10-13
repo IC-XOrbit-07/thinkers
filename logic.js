@@ -9,7 +9,9 @@ function showAlertOnce() {
 
 // Execute the function when the page loads
 window.onload = showAlertOnce;
-function setcolorto_indicator(password_condition){
+function setcolorto_indicator(password_condition , con1){
+    console.log(con1);
+
     let condition1_checker1 = document.getElementById("condition1");
     let condition1_checker2 = document.getElementById("condition2");
     let condition1_checker3 = document.getElementById("condition3");
@@ -28,8 +30,8 @@ function setcolorto_indicator(password_condition){
     password_condition[4] == 1 ?
         condition1_checker5.style.backgroundColor = "#00ff29":condition1_checker5.style.backgroundColor = "red" ; 
 
-    if(condition1_checker1.style.backgroundColor=='red' || condition1_checker2.style.backgroundColor=='red' || condition1_checker3.style.backgroundColor=='red' ||condition1_checker4.style.backgroundColor=='red' || condition1_checker5.style.backgroundColor=='red'){
-        alert("Enter password with given format : \n 1) There should be an Uppercase character \n 2) There should be a Lowercase character \n 3) There should be a Special Symbol \n 4) There should be a digit \n 5) There should not be any white space or empty character \n 6) Password Length must be >=8");
+    if(condition1_checker1.style.backgroundColor=='red' || condition1_checker2.style.backgroundColor=='red' || condition1_checker3.style.backgroundColor=='red' ||condition1_checker4.style.backgroundColor=='red' || condition1_checker5.style.backgroundColor=='red' || con1==false){
+        alert("Enter password with given format : \n\n Dot 1. There should be an Uppercase character \n Dot 2. There should be a Lowercase character \n Dot 3. There should be a Special Symbol \n Dot 4. There should be a digit \n Dot 5. Password Length must be >=8\n\n 6) There should not be any white space or empty character  (It is checked internally no significance with dots in password bar)");
 
         let apple_submit_logo = document.getElementById('apple_submit_logo');
         apple_submit_logo.style.display = "block";
@@ -40,7 +42,8 @@ function setcolorto_indicator(password_condition){
     }
     
     else{
-
+        alert("Sucessfully registered !!!");
+        // window.location.href = "./dashboard/final_dashboard.html";
     }
 }
 
@@ -81,8 +84,9 @@ function color_updater(){
     // let loading_spinner =  document.getElementById("extra_target");
     // loading_spinner.style.display = 'block';
 
+
     var con1 = check_password_same();
-    console.log(con1);
+    // console.log(con1);
 
     let getter_value = document.getElementById("sign_up_user_password");
     const checker = getter_value.value;
@@ -125,7 +129,7 @@ function color_updater(){
     checker.length >= 8 ? password_condition[4] = 1 : password_condition[5] = 0;
 
     // console.log(password_condition);
-    setcolorto_indicator(password_condition);
+    setcolorto_indicator(password_condition , con1);
 
     // setInterval(color_updater , 10000)
 }
